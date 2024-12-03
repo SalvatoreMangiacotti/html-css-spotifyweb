@@ -1,5 +1,121 @@
+/* RESET */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* GLOBAL ELEMENTS POSITION */
+
+#main-container {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+#side-navigation {
+    width: 230px;
+
+    /*DEBUG*/
+    background-color: orange;
+}
+
+main {
+    width: calc(100% - 230px);
+    overflow: auto;
+}
+
+header {
+    height: 100px;
+    top: 0;
+    position: sticky;
+
+    /*DEBUG*/
+    background-color: lavender;
+}
+
+footer {
+    height: 100px;
+
+    /*DEBUG*/
+    background-color: lightblue;
+}
+
+/* MAIN NAVIGATION TOP */
+
+main ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    /*DEBUG*/
+    background-color: lightcoral;
+}
+
+/* MAIN CONTENT - CARDS */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+
+    /*DEBUG*/
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+.card-popular {
+
+    /*DEBUG*/
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+/* FOOTER - SPOTIFY PLAYER */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#artist {
+
+    /*DEBUG*/
+    height: 100px;
+    width: 400px;
+    background-color: lightcoral;
+}
+
+#player {
+
+    /*DEBUG*/
+    height: 100px;
+    width: 400px;
+    background-color: lightcoral;
+}
+
+#volume {
+
+    /*DEBUG*/
+    height: 100px;
+    width: 400px;
+    background-color: lightcoral;
 }
