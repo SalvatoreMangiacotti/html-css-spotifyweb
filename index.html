@@ -4,7 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to CSS and Page Title -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify Web</title>
 </head>
@@ -14,19 +25,32 @@
     <div id="main-container">
 
         <!-- Side Navigation Bar -->
-        <nav id="side-navigation">
-            <div id="side-nav-content">
-                <img src="./img/logo.svg">
+        <nav>
+
+            <div id="side-navigation">
+
+                <img src="./img/logo.svg" id="logo">
 
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cerca</a></li>
-                    <li><a href="#">La tua libreria</a></li>
+                    <li>
+                        <img src="./img/home.svg">
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <img src="./img/search.svg">
+                        <a href="#">Cerca</a>
+                    </li>
+
+                    <li>
+                        <img src="./img/libreria.svg">
+                        <a href="#">La tua libreria</a>
+                    </li>
                 </ul>
 
                 <h3>PLAYLIST</h3>
-                <ul>
-                    <li>Crea Playlist</li>
+                <ul id="playlist">
+                    <li><i class="fa-solid fa-plus"></i>Crea Playlist</li>
 
                     <li>Nome Playlist</li>
                     <li>Nome Playlist</li>
@@ -38,8 +62,15 @@
                 </ul>
 
                 <div id="side-nav-bottom">
-                    <span>Installa app</span>
-                    <h3>John Doe</h3>
+                    <span>
+                        <img src="./img/download.svg">
+                        Installa app
+                    </span>
+
+                    <h3>
+                        <img src="./img/profile.svg">
+                        John Doe
+                    </h3>
                 </div>
             </div>
         </nav>
@@ -48,10 +79,10 @@
         <main>
             <!-- Header -->
             <header>
-                <a href="#">EFFETTUA L'UPGRADE</a>
+                <a href="#" class="button">EFFETTUA L'UPGRADE</a>
             </header>
 
-            <!-- Main Navigation Top -->
+            <!-- Main Navigation - Top -->
             <ul>
                 <li>IN EVIDENZA</li>
                 <li>PODCAST</li>
@@ -61,7 +92,7 @@
                 <li>SCOPRI</li>
             </ul>
 
-            <!-- Main Content Cards -->
+            <!-- Main Content - Cards -->
             <section>
                 <h2>Recently Played</h2>
                 <div class="card-container">
