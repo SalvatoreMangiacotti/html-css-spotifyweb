@@ -380,6 +380,9 @@ footer {
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 #footer-left,
@@ -408,14 +411,6 @@ footer {
     align-items: center;
     gap: 10px;
 }
-
-
-
-
-
-
-
-
 
 
 
