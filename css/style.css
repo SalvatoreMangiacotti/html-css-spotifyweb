@@ -27,7 +27,7 @@ a {
 a,
 li,
 span {
-    color: gainsboro;
+    color: rgb(201, 201, 201);
 }
 
 h2,
@@ -43,7 +43,7 @@ h4 {
 li,
 a,
 span {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 span {
@@ -69,6 +69,10 @@ span {
     text-align: center;
 }
 
+.button:hover {
+    padding: 15px 25px;
+}
+
 .svg-container {
     width: 25px;
 }
@@ -88,6 +92,11 @@ span {
 main {
     width: calc(100% - 230px);
     overflow: auto;
+}
+
+main ul li:hover {
+    cursor: pointer;
+    color: white;
 }
 
 header {
@@ -119,6 +128,13 @@ footer {
 
 #side-navigation ul {
     margin-bottom: 1rem;
+}
+
+#side-navigation ul li:hover,
+#side-navigation a:hover,
+#side-navigation span:hover {
+    color: white;
+    cursor: pointer;
 }
 
 #logo {
@@ -172,13 +188,37 @@ section {
 
 /* MAIN CONTENT - CARDS */
 
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 5rem;
 }
+
+.img-container {
+    position: relative;
+}
+
+.fa-play {
+    display: none;
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container:hover .fa-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
 
 .card,
 .card-popular {
@@ -192,6 +232,7 @@ section {
 }
 
 @media screen and (max-width:1024px) {
+
     .card,
     .card-popular {
         width: calc(100% / 4 - 1rem);
@@ -199,6 +240,7 @@ section {
 }
 
 @media screen and (max-width:680px) {
+
     .card,
     .card-popular {
         width: calc(100% / 2 - 1rem);
@@ -211,25 +253,42 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #222222;
+    gap: 20px;
+    color: white;
+    background-color: #222;
+    position: absolute;
+    width: 100%;
     padding: 10px;
-    gap: 10px;
 }
 
 .footer-container {
+    min-width: 15%;
+}
+
+.footer-container,
+#player,
+#song-playing {
     display: flex;
     align-items: center;
-    height: 100px;
-    width: 200px;
-
-    background-color: tomato;
+    justify-content: center;
+    gap: 10px;
 }
 
-
-#range-container span {
-    margin: 0;
-}
-
-.footer-container img {
+footer img {
     width: 50px;
+}
+
+#player-container {
+    width: 30%;
+}
+
+#volume-bar,
+#player-bar {
+    height: 5px;
+    background-color: gray;
+    width: 100%;
+}
+
+#song-playing span {
+    margin: 0;
 }
