@@ -14,6 +14,7 @@ body {
 img {
     display: block;
     width: 100%;
+    cursor: pointer;
 }
 
 ul li {
@@ -22,6 +23,10 @@ ul li {
 
 a {
     text-decoration: none;
+}
+
+i {
+    cursor: pointer;
 }
 
 a,
@@ -43,12 +48,10 @@ nav {
     background-color: #000000;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 230px;
-}
-
-#user {
-    margin-top: auto;
+    overflow: hidden;
 }
 
 #playlist {
@@ -60,7 +63,7 @@ nav {
 #spotify-logo {
     width: 150px;
     margin: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 nav img {
@@ -86,13 +89,13 @@ nav a {
 }
 
 nav ul li,
-#user span {
+.user span {
     font-size: 0.8rem;
 }
 
 nav li,
-#user span,
-#user h4 {
+.user span,
+.user h4 {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -104,17 +107,22 @@ nav h4 {
     padding-left: 1rem;
 }
 
-#user {
+.user {
     padding: 1rem;
 }
 
-#user span {
+.user-picture {
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.user span {
     padding: 0;
     border-bottom: 1px solid white;
     padding-bottom: 10px;
 }
 
-#user h4 {
+.user h4 {
     padding: 0;
     padding-top: 10px;
 }
@@ -148,7 +156,9 @@ nav span:hover {
     cursor: pointer;
 }
 
-
+nav .fa-plus:hover{
+    background-color: white;
+}
 
 /* HEADER */
 
@@ -177,7 +187,7 @@ header {
 }
 
 .button:hover {
-    padding: 12px 20px;
+    transform: scale(1.1);
 }
 
 /* MAIN */
@@ -363,16 +373,21 @@ footer span {
 }
 
 .volume-bar {
-    width: 50%;
+    width: 40%;
 }
 
 #player-control i {
     font-size: 20px;
-    cursor: pointer;
 }
 
 #player-control .fa-circle-play {
     font-size: 30px;
+}
+
+/* FOOTER HOVER */
+
+#player-control .fa-circle-play:hover {
+    transform: scale(1.2);
 }
 
 /* FOOTER */
@@ -385,9 +400,6 @@ footer {
     justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
 }
 
 #footer-left,
@@ -417,8 +429,6 @@ footer {
     gap: 10px;
 }
 
-
-
 /* MEDIA QUERIES */
 
 /* MAIN CARDS MEDIA */
@@ -434,5 +444,49 @@ footer {
 @media screen and (max-width:650px) {
     .card {
         width: calc(100% / 2 - 1rem);
+    }
+
+    #footer-left img {
+        display: none;
+    }
+}
+
+/* Extra-small view */
+
+#small-view-nav {
+    background-color: #000000;
+    display: none;
+    width: 50px;
+    overflow: hidden;
+}
+
+@media screen and (max-width:550px) {
+
+    main {
+        width: calc(100% - 50px);
+    }
+
+    nav {
+        display: none;
+    }
+
+    #small-view-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #small-view-nav .nav-top,
+    #small-view-nav .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0.5rem;
+    }
+
+    #app-download {
+        margin-right: 4px;
     }
 }
