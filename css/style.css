@@ -27,12 +27,22 @@ a {
 
 i {
     cursor: pointer;
+    color: lightgray;
 }
 
 a,
 li,
 span {
     font-weight: 500;
+    color: lightgray;
+    cursor: pointer;
+}
+
+a:hover,
+li:hover,
+span:hover,
+i:hover {
+    color: white;
 }
 
 /* MAIN CONTAINER */
@@ -60,10 +70,19 @@ nav {
 
 /* NAVBAR STYLE */
 
+.nav-top img {
+    opacity: 0.7;
+}
+
+.nav-top img:hover {
+    opacity: 1;
+}
+
 #spotify-logo {
     width: 150px;
     margin: 1rem;
     margin-bottom: 2rem;
+    opacity: 1;
 }
 
 nav img {
@@ -80,12 +99,6 @@ nav h4 {
     font-size: 20px;
     color: #000000;
     margin-right: 5px;
-}
-
-nav span,
-nav li,
-nav a {
-    color: lightgray;
 }
 
 nav ul li,
@@ -149,15 +162,9 @@ nav li:active::before {
     position: absolute;
 }
 
-nav li:hover,
-nav a:hover,
-nav span:hover {
-    color: white;
-    cursor: pointer;
-}
-
-nav .fa-plus:hover{
+nav .fa-plus:hover {
     background-color: white;
+    color: #000000;
 }
 
 /* HEADER */
@@ -195,7 +202,6 @@ header {
 /* MAIN NAVBAR STYLE */
 
 main ul li {
-    color: lightgray;
     cursor: pointer;
     font-size: 0.8rem;
     position: relative;
@@ -221,9 +227,6 @@ main ul {
 
 /* MAIN NAVBAR HOVER */
 
-main ul li:hover {
-    color: white;
-}
 
 main ul li:active::after {
     content: "";
@@ -251,7 +254,6 @@ section h4 {
 }
 
 section span {
-    color: lightgray;
     font-size: 0.8rem;
 }
 
@@ -279,7 +281,8 @@ section span {
 
 /* background opacity on hover */
 
-.card-img-container::before {
+.card-img-container::before,
+.round-hover::before {
     content: "";
     position: absolute;
     background-color: rgba(0, 0, 0, 0.30);
@@ -291,14 +294,6 @@ section span {
 }
 
 .round-hover::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.30);
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
 }
 
@@ -338,7 +333,8 @@ section span {
 
 footer h4,
 #footer-middle,
-#footer-right {
+#footer-right,
+#footer-middle i {
     color: white;
 }
 
@@ -348,15 +344,10 @@ footer h4,
 
 footer span {
     font-size: 0.8rem;
-    color: lightgray;
 }
 
 #artist {
     margin-right: 10px;
-}
-
-#folders {
-    color: lightgray;
 }
 
 #folders i {
@@ -366,10 +357,22 @@ footer span {
 .music-bar,
 .volume-bar {
     height: 5px;
-    background-color: white;
+    background-color: gray;
     border-radius: 99px;
     width: 100%;
     cursor: pointer;
+    position: relative;
+}
+
+.music-bar:hover .progress-bar,
+.volume-bar:hover .progress-bar {
+    height: 5px;
+    background-color: white;
+    border-radius: 99px;
+    width: 50%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 .volume-bar {
